@@ -1,0 +1,15 @@
+﻿@model GetStudentGpa.Models.StudentGPAModel
+
+<h1>Student GPA Details</h1>
+<table>
+    <tbody>
+        @foreach (var property in typeof(StudentGPAModel).GetProperties())
+        {
+            <tr>
+                <td>@property.Name</td>
+                <td>@property.GetValue(Model)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
